@@ -1,2 +1,0 @@
-GitMall-GMALL test
-===================

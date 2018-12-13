@@ -14,6 +14,7 @@ public enum ResponseCode {
     NEED_LOGIN(10,"NEED_LOGIN"),
     ILLEGAL_ARGUMENT(2,"ILLEGAL_ARGUMENT");
 
+
     private final int code;
     private final String desc;
 

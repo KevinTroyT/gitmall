@@ -110,7 +110,7 @@ public class ProductServiceImpl implements IProductService {
         productDetailVo.setDetail(product.getDetail());
         productDetailVo.setName(product.getName());
         productDetailVo.setStock(product.getStock());
-
+        productDetailVo.setSubImages(product.getSubImages());
         // imageHost
         productDetailVo.setImageHost(PropertiesUtil.getProperty("ftp.server.http.prefix","132.232.159.58"));
         // ParentCategoryId

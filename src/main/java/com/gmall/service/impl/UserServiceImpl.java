@@ -97,7 +97,7 @@ public class UserServiceImpl implements IUserService{
         if(resultCount>0){
             String forgetToken = UUID.randomUUID().toString();
             TokenCache.setKey(TokenCache.TOKEN_PREFIX+username,forgetToken);
-            return ServerResponse.createBySuccessMessage(forgetToken);
+            return ServerResponse.createBySuccess(forgetToken);
         }
         return ServerResponse.createByErrorMessage("问题答案错误");
     }

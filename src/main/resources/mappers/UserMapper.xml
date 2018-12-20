@@ -192,4 +192,9 @@
     WHERE email= #{email}
     and id != #{userId}
   </select>
+  <select id="selectCountUsers" resultType="int">
+    SELECT
+    count(id)
+    FROM gmall_user
+  </select>
 </mapper>

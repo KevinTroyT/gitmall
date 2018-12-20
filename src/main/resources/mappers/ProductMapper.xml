@@ -209,4 +209,10 @@
       </foreach>
     </if>
   </select>
+  <select id="selectCountProduct" resultType="int">
+    SELECT
+    count(id)
+    FROM
+    gmall_product
+  </select>
 </mapper>

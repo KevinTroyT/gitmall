@@ -9,12 +9,14 @@ import com.gmall.dao.UserMapper;
 import com.gmall.service.IStatisticService;
 import com.gmall.vo.BaseCountVo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 /**
  * @ program : gmall
  * @ author : troykevin
  * @ create : 2018-12-20 19:34
  **/
+@Service("iStatisticServiceImpl")
 public class StatisticServiceImpl implements IStatisticService {
 
     @Autowired

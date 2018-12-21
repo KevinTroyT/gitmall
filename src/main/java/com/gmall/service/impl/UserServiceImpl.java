@@ -2,6 +2,8 @@ package com.gmall.service.impl;/**
  * Created by troykevin on 2018/11/23.
  */
 
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import com.gmall.common.Const;
 import com.gmall.common.ServerResponse;
 import com.gmall.common.TokenCache;
@@ -10,10 +12,10 @@ import com.gmall.pojo.User;
 import com.gmall.service.IUserService;
 import com.gmall.util.MD5Util;
 import org.apache.commons.lang3.StringUtils;
-import org.aspectj.apache.bcel.generic.FieldGenOrMethodGen;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.UUID;
 
 
@@ -178,5 +180,13 @@ public class UserServiceImpl implements IUserService{
         }else{
             return ServerResponse.createByError();
         }
+    }
+
+
+    public ServerResponse<PageInfo> getUserList(int pageNum,int pageSize){
+        PageHelper.startPage(pageNum,pageSize);
+        List<User> userList = userMapper.selectAllUsers();
+        PageInfo pageResult = new PageInfo(userList);
+        return ServerResponse.createBySuccess(pageResult);
     }
 }

@@ -224,4 +224,9 @@
     FROM gmall_order
     ORDER BY create_time desc
   </select>
+  <select id="selectCountOrder" resultType="int">
+    SELECT
+    count(id)
+    FROM gmall_order
+  </select>
 </mapper>

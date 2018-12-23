@@ -3,6 +3,7 @@ package com.gmall.service;
  * Created by troykevin on 2018/11/23.
  */
 
+import com.github.pagehelper.PageInfo;
 import com.gmall.common.ServerResponse;
 import com.gmall.pojo.User;
 
@@ -89,5 +90,13 @@ public interface IUserService {
      * @return
      */
     ServerResponse checkAdmin(User user);
+
+    /**
+     * 后台用，获得所有用户列表
+     * @param pageNum
+     * @param pageSize
+     * @return
+     */
+    ServerResponse<PageInfo> getUserList(int pageNum, int pageSize);
 
 }

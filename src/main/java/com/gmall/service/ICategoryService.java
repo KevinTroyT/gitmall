@@ -19,7 +19,7 @@ public interface ICategoryService {
     ServerResponse addCategory(String categoryName, Integer parentId);
 
     /**
-     * 更新品类
+     * 更新品类名称
      * @param session
      * @param categoryId
      * @param categoryName

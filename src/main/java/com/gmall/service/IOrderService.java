@@ -48,7 +48,7 @@ public interface IOrderService {
      * @param pageSize
      * @return
      */
-    ServerResponse<PageInfo> getOrderList(Integer userId, int pageNum, int pageSize);
+    ServerResponse<PageInfo> getOrderList(Integer usgiterId, int pageNum, int pageSize);
 
     /**
      * 后台详细搜索
